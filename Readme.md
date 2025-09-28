@@ -22,15 +22,11 @@ This project was built as part of an assignment to demonstrate full-stack develo
 
   * Welcome page showing user details after login/signup.
   * Mobile-friendly, closely replicating the provided design.
-* **Deployment**
-
-  * Hosted in the cloud with a shareable URL.
 
 ---
 
 ## 🖼️ Screenshots
 
-> Add screenshots in the `screenshots/` folder and update below paths.
 
 ### Signup Page
 
@@ -130,7 +126,7 @@ The app will be available at:
 ## 🚀 Deployment
 
 The project is deployed here:
-🔗 **[Live Demo](https://your-deployment-link.com)**
+🔗 **[Live Demo](https://my-notez-9qj52kyqp-shivam-guptas-projects-49a15ad6.vercel.app/)**
 
 ---
 

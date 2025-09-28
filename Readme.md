@@ -1,143 +1,147 @@
-# Full Stack Node.js App
+## MyNotez 📝
 
-A simple full-stack application for creating and managing notes.  
-Built with **React (Vite + TypeScript)** on the frontend and **Node.js + Express + MongoDB** on the backend.
+A full-stack **note-taking application** with modern authentication and a responsive design.
+MyNotez allows users to securely sign up, log in (via email + OTP or Google), and manage personal notes (create & delete).
 
----
-
-## Features
-- User authentication (Email OTP or Google Sign-In)
-- Secure JWT-based session management
-- Create and delete notes
-- Error handling for invalid inputs and API failures
-- Responsive UI built with Tailwind CSS
+This project was built as part of an assignment to demonstrate full-stack development with **React + Node.js + TypeScript**.
 
 ---
 
-## Tech Stack
-*Frontend:* React, Vite, Tailwind CSS, Axios, React Router  
-*Backend:* Node.js, Express.js, Mongoose, JSON Web Token (JWT), dotenv, cors  
-*DB:* MongoDB (Atlas or local)  
-*Deployment:* Frontend (Vercel/Netlify), Backend (Render/Heroku)
+## 🚀 Features
+
+* **User Authentication**
+
+  * Signup using **email + OTP** or **Google account**.
+  * Proper input validation with error handling for invalid inputs, OTP errors, and API failures.
+  * Secure authentication using **JWT**.
+* **Notes Management**
+
+  * Create and delete personal notes.
+  * Display notes on a responsive dashboard.
+* **User Experience**
+
+  * Welcome page showing user details after login/signup.
+  * Mobile-friendly, closely replicating the provided design.
+* **Deployment**
+
+  * Hosted in the cloud with a shareable URL.
 
 ---
 
-## Prerequisites
-- Node.js (LTS recommended) and npm  
-- A MongoDB connection string (Atlas or local)  
+## 🖼️ Screenshots
+
+> Add screenshots in the `screenshots/` folder and update below paths.
+
+### Signup Page
+
+![Signup Page](./screenshots/signup.png)
+
+### Dashboard
+
+![Dashboard](./screenshots/dashboard.png)
 
 ---
 
+## 🛠️ Tech Stack
 
+* **Frontend:** React.js (TypeScript)
+* **Backend:** Node.js + Express (TypeScript)
+* **Database:** MongoDB 
+* **Authentication:** JWT, Google OAuth
+* **Version Control:** Git & GitHub
 
 ---
 
-## Quick Start (Local)
+## 📂 Project Structure
 
-Clone the :
-bash
-git clone https://github.com/aryandumale04/highwayDelite.git
+```
+MyNotez/
+│── backend/          # Node.js + Express server (API + Auth + Notes logic)
+│── frontend/         # React + TypeScript client
+│── screenshots/      # Screenshots for README (signup, dashboard, etc.)
+│── .gitignore
+│── README.md
+```
 
+---
 
+## ⚙️ Setup & Installation
 
-### Backend Setup
-Move into backend and install dependencies:
-bash
-cd backend
-npm install
+### 1. Clone the repository
 
+```bash
+git clone https://github.com/your-username/MyNotez.git
+cd MyNotez
+```
 
-Create a .env file in *backend/* with:
-env
-PORT=5000
-MONGO_URI=<your_mongodb_connection_string>
-JWT_SECRET=<your_jwt_secret_key>
-JWT_EXPIRE=<token_time>
-GOOGLE_CLIENT_ID = <your_client_id>
+### 2. Setup environment variables
 
+* Copy `.env.example` → `.env` in both **backend** and **frontend** folders.
+* Add required keys:
 
-Run the backend:
-bash
-node server.ts
+  * Database connection string (MongoDB / MySQL / PostgreSQL)
+  * JWT secret
+  * Google OAuth client ID & secret
 
-> The API will start at http://localhost:5000
+### 3. Install dependencies
 
-### Frontend Setup
-Open a new terminal at project root, then:
-bash
+```bash
+# Install frontend dependencies
 cd frontend
 npm install
 
-Create *frontend/.env*:
-env
-VITE_GOOGLE_CLIENT_ID=<your_client_id>
+# Install backend dependencies
+cd ../backend
+npm install
+```
 
+### 4. Run the project locally
 
-
-Start the frontend dev server:
-bash
+```bash
+# Start backend (port 5000 by default)
+cd backend
 npm run dev
 
-> Vite runs by default at http://localhost:5173
+# Start frontend (port 3000 by default)
+cd ../frontend
+npm start
+```
+
+The app will be available at:
+👉 [http://localhost:3000](http://localhost:3000)
 
 ---
 
-## Build Instructions (Production)
+## 📜 Scripts
 
-These are the *exact steps* to build the project for production.
+### Frontend
 
-### Backend (Node.js)
-Install production dependencies (omit dev):
-bash
-cd backend
-npm ci --omit=dev || npm install --production
+* `npm start` – Run the development server.
+* `npm run build` – Build the production-ready app.
 
-> The backend is a Node service and does not require a compile step. Deploy this folder to your server/host with the .env set.
+### Backend
 
-### Frontend (React + Vite)
-Build static assets:
-bash
-cd frontend
-npm run build
-
-> The production-ready files are generated in frontend/dist/.  
-> Serve dist/ with any static host (Vercel/Netlify/Nginx).
+* `npm run dev` – Run backend in development mode with hot reload.
+* `npm run build` – Compile TypeScript to JavaScript.
+* `npm start` – Run the compiled backend server.
 
 ---
 
-## Common Scripts
+## 🚀 Deployment
 
-*Backend (package.json)*
-- npm start – start the API (typically node server.ts)  
-- npm run dev – start with hot-reload (if using nodemon)
-
-*Frontend (package.json)*
-- npm run dev – start Vite dev server  
-- npm run build – production build  
-- npm run preview – preview the production build locally
+The project is deployed here:
+🔗 **[Live Demo](https://your-deployment-link.com)**
 
 ---
 
-## Environment Variables Summary
+## ✅ Additional Notes
 
-*backend/.env*
-
-PORT=5000
-MONGO_URI=<your_mongodb_connection_string>
-JWT_SECRET=<your_jwt_secret_key>
-JWT_EXPIRE=<token_time>
-GOOGLE_CLIENT_ID = <your_client_id>
-
-
-*frontend/.env *
-
-VITE_GOOGLE_CLIENT_ID=<your_client_id>
-
+* Code is written using the **latest stable versions** of dependencies.
+* Each feature has been committed separately for better tracking.
+* Cloud deployment ensures accessibility and easy testing.
 
 ---
 
-## Deployment Notes
-- *Backend:* Deploy /backend to Render/Heroku/AWS/etc. Make sure to set the environment variables there.  
-- *Frontend:* Deploy /frontend to Vercel/Netlify. Set VITE_GOOGLE_CLIENT_ID to your deployed backend URL.
+## 👩‍💻 Author
 
----
+Developed by **Shivam Gupta**
